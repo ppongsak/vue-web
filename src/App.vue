@@ -1,28 +1,65 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app">
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+      <v-spacer></v-spacer>
+      <div class="=d-flex align-right">
+        <v-toolbar-items>
+          <v-btn text>
+            <router-link :to="{ path: '/' }">Home</router-link>
+          </v-btn>
+          <v-btn text>
+            <router-link :to="{ path: 'car' }">String</router-link>
+          </v-btn>
+          <v-btn text>
+            <router-link :to="{ path: 'dog' }">Place</router-link>
+          </v-btn>
+        </v-toolbar-items>
+      </div>
+    </v-app-bar>
+    <v-content>
+      <router-view />
+      <Footer />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Home from './components/Home';
+import Footer from './components/footer/Footer';
+// import Mains from './components/Mains';
+
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: 'App',
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    // Home,
+    Footer,
+    // Mains,
+    // Routers,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
