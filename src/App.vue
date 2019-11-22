@@ -24,27 +24,27 @@
       <div class="=d-flex align-right">
         <v-toolbar-items>
           <v-btn text>
-            <router-link :to="{ path: '/' }">Home</router-link>
+            <router-link to="/">Home</router-link>
           </v-btn>
           <v-btn text>
-            <router-link :to="{ path: 'car' }">String</router-link>
+            <router-link to="/mains">String</router-link>
           </v-btn>
           <v-btn text>
-            <router-link :to="{ path: 'dog' }">Place</router-link>
+            <router-link to="/car">Place</router-link>
           </v-btn>
         </v-toolbar-items>
       </div>
     </v-app-bar>
     <v-content>
       <router-view></router-view>
-      <Footer />
+      <!-- <Footer /> -->
     </v-content>
   </v-app>
 </template>
 
 <script>
 // import Home from './components/Home';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 // import Mains from './components/Mains';
 
 
@@ -53,7 +53,7 @@ export default {
 
   components: {
     // Home,
-    Footer,
+    // Footer,
     // Mains,
     // Routers,
   },
