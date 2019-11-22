@@ -36,7 +36,7 @@
       </div>
     </v-app-bar>
     <v-content>
-      <router-view />
+      <router-view></router-view>
       <Footer />
     </v-content>
   </v-app>
